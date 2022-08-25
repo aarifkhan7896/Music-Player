@@ -1,0 +1,196 @@
+@import "mixin";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #fff;
+  color: #000;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: lightgray;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: gray;
+}
+.mainContainer {
+  @include display(center);
+  margin: 0 auto;
+
+  .mainDiv {
+    background: rgb(254, 211, 221);
+    background: linear-gradient(
+      180deg,
+      rgba(254, 211, 221, 0.0984768907563025) 30%,
+      rgba(9, 9, 121, 0.053658963585434205) 70%,
+      rgba(0, 212, 255, 0.011642156862745057) 100%
+    );
+    width: 100rem;
+    height: 60rem;
+    padding: 3rem;
+
+    .top {
+      width: 40rem;
+      margin: auto;
+      #search {
+        width: 100%;
+        font-size: 1.5rem;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        padding: 1rem 1.5rem;
+        border-radius: 2rem;
+        @include boxShadow();
+      }
+    }
+    .mid {
+      margin-bottom: 10rem;
+      .allCard {
+        @include display(space-around);
+        flex-wrap: wrap;
+        .myCard {
+          width: 13rem;
+          height: 6rem;
+
+          img {
+            border-radius: 2rem;
+            @include boxShadow();
+            transition: all 1s;
+
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+    #playerDiv {
+      @include display(center);
+      height: 38rem;
+      margin: 0;
+      .left {
+        background-color: #fff;
+        width: 90%;
+        margin: auto;
+        @include boxShadow();
+        border-radius: 1rem;
+        padding: 1rem;
+
+        .innerCard {
+          text-align: center;
+
+          .coverPhoto {
+            width: 15rem;
+            margin: auto;
+
+            img {
+              animation: circle 10s linear infinite;
+            }
+          }
+
+          p {
+            font-size: 2rem;
+            color: gray;
+            font-weight: 500;
+            margin: 0;
+          }
+          span {
+            font-size: 1.5rem;
+            color: gray;
+          }
+          .playerBtn {
+            @include display(space-evenly);
+            margin: 1rem 0;
+
+            .btn {
+              display: none;
+            }
+
+            .active {
+              @include boxShadow();
+              border-radius: 50%;
+              padding: 1rem 1.5rem;
+              font-size: 2rem;
+              color: gray;
+              cursor: pointer;
+              display: flex;
+            }
+          }
+        }
+      }
+      .right {
+        width: 90%;
+        margin: 2rem auto;
+        .playlist {
+          height: 27rem;
+          overflow-y: scroll;
+          .playlistCard {
+            @include display(space-between);
+            border: 1px solid gray;
+            padding: 1rem;
+            border-radius: 1rem;
+            margin: 1rem 0.5rem;
+
+            &:hover {
+              background-color: #fff;
+            }
+
+            img {
+              width: 4rem;
+            }
+
+            span {
+              font-size: 1.5rem;
+            }
+
+            .fa-play {
+              @include boxShadow();
+              font-size: 1.5rem;
+              padding: 1rem;
+              border-radius: 50%;
+              color: gray;
+
+              &:hover {
+                cursor: pointer;
+                color: #000;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media only screen and (max-width: 700px) {
+  html {
+    font-size: 45%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  html {
+    font-size: 30%;
+  }
+  .mid .allCard .myCard {
+    margin: 4rem;
+  }
+}

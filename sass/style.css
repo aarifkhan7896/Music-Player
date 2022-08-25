@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: lightgray;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: gray;
+}
+
+.mainContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+.mainContainer .mainDiv {
+  background: #fed3dd;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, rgba(254, 211, 221, 0.0984769)), color-stop(70%, rgba(9, 9, 121, 0.053659)), to(rgba(0, 212, 255, 0.0116422)));
+  background: linear-gradient(180deg, rgba(254, 211, 221, 0.0984769) 30%, rgba(9, 9, 121, 0.053659) 70%, rgba(0, 212, 255, 0.0116422) 100%);
+  width: 100rem;
+  height: 60rem;
+  padding: 3rem;
+}
+
+.mainContainer .mainDiv .top {
+  width: 40rem;
+  margin: auto;
+}
+
+.mainContainer .mainDiv .top #search {
+  width: 100%;
+  font-size: 1.5rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  -webkit-box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mainContainer .mainDiv .mid {
+  margin-bottom: 10rem;
+}
+
+.mainContainer .mainDiv .mid .allCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.mainContainer .mainDiv .mid .allCard .myCard {
+  width: 13rem;
+  height: 6rem;
+}
+
+.mainContainer .mainDiv .mid .allCard .myCard img {
+  border-radius: 2rem;
+  -webkit-box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.mainContainer .mainDiv .mid .allCard .myCard img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.mainContainer .mainDiv #playerDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 38rem;
+  margin: 0;
+}
+
+.mainContainer .mainDiv #playerDiv .left {
+  background-color: #fff;
+  width: 90%;
+  margin: auto;
+  -webkit-box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.mainContainer .mainDiv #playerDiv .left .innerCard {
+  text-align: center;
+}
+
+.mainContainer .mainDiv #playerDiv .left .innerCard .coverPhoto {
+  width: 15rem;
+  margin: auto;
+}
+
+.mainContainer .mainDiv #playerDiv .left .innerCard .coverPhoto img {
+  -webkit-animation: circle 10s linear infinite;
+          animation: circle 10s linear infinite;
+}
+
+.mainContainer .mainDiv #playerDiv .left .innerCard p {
+  font-size: 2rem;
+  color: gray;
+  font-weight: 500;
+  margin: 0;
+}
+
+.mainContainer .mainDiv #playerDiv .left .innerCard span {
+  font-size: 1.5rem;
+  color: gray;
+}
+
+.mainContainer .mainDiv #playerDiv .left .innerCard .playerBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0;
+}
+
+.mainContainer .mainDiv #playerDiv .left .innerCard .playerBtn .btn {
+  display: none;
+}
+
+.mainContainer .mainDiv #playerDiv .left .innerCard .playerBtn .active {
+  -webkit-box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  padding: 1rem 1.5rem;
+  font-size: 2rem;
+  color: gray;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mainContainer .mainDiv #playerDiv .right {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.mainContainer .mainDiv #playerDiv .right .playlist {
+  height: 27rem;
+  overflow-y: scroll;
+}
+
+.mainContainer .mainDiv #playerDiv .right .playlist .playlistCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid gray;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 1rem 0.5rem;
+}
+
+.mainContainer .mainDiv #playerDiv .right .playlist .playlistCard:hover {
+  background-color: #fff;
+}
+
+.mainContainer .mainDiv #playerDiv .right .playlist .playlistCard img {
+  width: 4rem;
+}
+
+.mainContainer .mainDiv #playerDiv .right .playlist .playlistCard span {
+  font-size: 1.5rem;
+}
+
+.mainContainer .mainDiv #playerDiv .right .playlist .playlistCard .fa-play {
+  -webkit-box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: 50%;
+  color: gray;
+}
+
+.mainContainer .mainDiv #playerDiv .right .playlist .playlistCard .fa-play:hover {
+  cursor: pointer;
+  color: #000;
+}
+
+@-webkit-keyframes circle {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes circle {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  html {
+    font-size: 30%;
+  }
+  .mid .allCard .myCard {
+    margin: 4rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
